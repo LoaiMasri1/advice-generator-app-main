@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+:root {
+  --grayishBlue: hsl(217, 19%, 38%);
+  --darkGrayishBlue: hsl(217, 19%, 24%);
+  --darkBlue: hsl(218, 23%, 16%);
+  --lightCyan: hsl(193, 38%, 86%);
+  --neonGreen: hsl(150, 100%, 66%);
+  --fontSize: 28px;
+  --marginBottom: 20px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-size: var(--fontSize);
+  background: var(--darkBlue);
+  color: var(--lightCyan);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+}
+
+#advice {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--darkGrayishBlue);
+  color: var(--grayishBlue);
+  padding: var(--marginBottom);
+  position: relative;
+  background: var(--darkGrayishBlue);
+  color: var(--lightCyan);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#advice .divider {
+  width: 100%;
+  max-width: 500px;
+  padding-bottom: calc(var(--marginBottom) + 20px);
+  display: none;
+}
+
+#advice h6 {
+  font-size: 0.85rem;
+  color: var(--neonGreen);
+  margin-bottom: var(--marginBottom);
+  letter-spacing: 5px;
+}
+
+#advice p {
+  margin-bottom: var(--marginBottom);
+}
+
+#advice button {
+  position: absolute;
+  bottom: calc(var(--marginBottom) * -1.5);
+  background: var(--neonGreen);
+  color: var(--darkGrayishBlue);
+  padding: 15px;
+  border-radius: 100px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+#advice button:hover {
+  box-shadow: 0 0 30px var(--neonGreen);
+}
+
+@media screen and (max-width: 375px) {
+  #advice #divider1 {
+    display: none;
+  }
+  #advice #divider2 {
+    display: block;
+  }
+
+  #advice {
+    max-width: 80%;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  /*and (max-width: 1440px)*/
+  #advice #divider2 {
+    display: none;
+  }
+  #advice #divider1 {
+    display: block;
+  }
+
+  #advice {
+    max-width: 80%;
+  }
+}
+@media screen and (min-width: 760px) {
+  #advice {
+    max-width: 50%;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
